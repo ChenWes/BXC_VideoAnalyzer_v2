@@ -4,7 +4,7 @@ import inspect
 class ZLMediaKit():
     def __init__(self,ConfigObj):
         self.mediaApiHost = ConfigObj["mediaApiHost"]
-        self.secret = "035c73f7-bb6b-4889-a715-d9eb2d1925cc"
+        self.secret = "3MGLvIYQryKqw85QsIwDHuUqV3e3EWmy"
         self.default_push_stream_app = "analyzer"
 
         self.mediaHttpHost = ConfigObj["mediaHttpHost"]
