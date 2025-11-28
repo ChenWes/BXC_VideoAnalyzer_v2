@@ -8,6 +8,8 @@
 #include "Scheduler.h"
 #include "Config.h"
 #include "Control.h"
+#include <sstream>
+#include <iomanip>
 
 #ifndef WIN32
 #include <opencv2/opencv.hpp>
@@ -257,7 +259,9 @@ namespace AVSAnalyzer {
             cv::putText(image, class_name, cv::Point(x1, y1 + 15), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1, cv::LINE_AA);
 
         }
-        std::string info = "checkFps:" + std::to_string(mControl->checkFps);
+        std::stringstream ss;
+        ss << std::fixed << std::setprecision(2) << mControl->checkFps;
+        std::string info = "checkFps:" + ss.str();
         cv::putText(image, info, cv::Point(20, 40), cv::FONT_HERSHEY_COMPLEX, mControl->videoWidth / 1000, cv::Scalar(0, 0, 255), 1, cv::LINE_AA);
 
         return happen;
