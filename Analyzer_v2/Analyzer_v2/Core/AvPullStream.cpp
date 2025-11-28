@@ -45,9 +45,9 @@ namespace AVSAnalyzer {
         // video start
         mControl->videoIndex = -1;
 
-        for (int i = 0; i < mFmtCtx->nb_streams; i++)
+        for (unsigned int i = 0; i < mFmtCtx->nb_streams; i++)
         {
-            if (mFmtCtx->streams[i]->codec->codec_type == AVMEDIA_TYPE_VIDEO)
+            if (mFmtCtx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO)
             {
                 mControl->videoIndex = i;
                 break;
@@ -59,7 +59,7 @@ namespace AVSAnalyzer {
         if (mControl->videoIndex > -1) {
             AVCodecParameters* videoCodecPar = mFmtCtx->streams[mControl->videoIndex]->codecpar;
 
-            AVCodec* videoCodec = NULL;
+            const AVCodec* videoCodec = NULL;
             if (mConfig->supportHardwareVideoDecode) {
                 if (AV_CODEC_ID_H264 == videoCodecPar->codec_id) {
                     if (!videoCodec) {

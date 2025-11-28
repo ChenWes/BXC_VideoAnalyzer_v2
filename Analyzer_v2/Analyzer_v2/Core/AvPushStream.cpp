@@ -10,7 +10,9 @@ extern "C" {
 #include <libavutil/imgutils.h>
 #include <libswresample/swresample.h>
 }
+#ifdef _MSC_VER
 #pragma warning(disable: 4996)
+#endif
 
 namespace AVSAnalyzer {
     AvPushStream::AvPushStream(Config* config, Control* control) :
@@ -37,7 +39,7 @@ namespace AVSAnalyzer {
         }
 
         // init video start
-        AVCodec* videoCodec = avcodec_find_encoder(AV_CODEC_ID_H264);
+        const AVCodec* videoCodec = avcodec_find_encoder(AV_CODEC_ID_H264);
         if (!videoCodec) {
             LOGI("avcodec_find_encoder error: pushStreamUrl=%s", mControl->pushStreamUrl.data());
             return false;

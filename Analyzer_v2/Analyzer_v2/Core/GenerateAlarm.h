@@ -3,6 +3,7 @@
 
 #include <queue>
 #include <mutex>
+#include <string>
 namespace AVSAnalyzer {
 
 	class Config;

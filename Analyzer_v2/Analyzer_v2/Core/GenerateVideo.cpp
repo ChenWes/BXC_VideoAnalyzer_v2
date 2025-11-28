@@ -21,7 +21,9 @@ extern "C" {
 #include <libavutil/imgutils.h>
 #include <libswresample/swresample.h>
 }
+#ifdef _MSC_VER
 #pragma warning(disable: 4996)
+#endif
 
 namespace AVSAnalyzer {
 
@@ -145,7 +147,7 @@ namespace AVSAnalyzer {
         }
 
         // 初始化视频编码器 start
-        AVCodec* videoCodec = avcodec_find_encoder(AV_CODEC_ID_H264);
+        const AVCodec* videoCodec = avcodec_find_encoder(AV_CODEC_ID_H264);
         if (!videoCodec) {
             LOGE("avcodec_find_decoder error");
             return false;
