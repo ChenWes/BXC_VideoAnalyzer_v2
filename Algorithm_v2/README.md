@@ -30,3 +30,46 @@ python AlgorithmApiServer.py --port 9003
 
 ~~~
 
+
+
+#### Anconda环境接管
+
+2025-11-27修改脚本
+
+
+```bash
+
+
+# 建议使用Anaconda Prompt命令行运行项目
+# 进入至项目目录
+
+d:
+cd D:\report\other\BXC_VideoAnalyzer_v2\Algorithm_v2
+
+
+
+
+
+
+
+# 1、创建环境
+conda create -n algorithm-py37 python=3.7
+
+# 2、启动环境
+conda activate algorithm-py37
+
+
+# 3、升级pip及安装依赖
+python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+# 4、启动服务器
+python AlgorithmApiServer.py --port 9003
+
+
+# 5、不再需要运行时删除环境
+conda remove -n algorithm-py37
+
+```

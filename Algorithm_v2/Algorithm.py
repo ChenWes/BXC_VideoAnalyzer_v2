@@ -64,9 +64,19 @@ class Algorithm():
 
         if 1 == image_type:
             # 1 == image_type 则 image是str类型的 image_base64
-            encoded_image_byte = base64.b64decode(image)
+            image_base64 = image
+            
+            # 处理 Data URI 格式 (例如: data:image/jpeg;base64,xxxxx)
+            if image_base64.startswith('data:image'):
+                # 移除 Data URI 前缀，只保留实际的 Base64 数据
+                image_base64 = image_base64.split(',', 1)[1]
+            
+            # 修复可能在表单传输中被破坏的Base64字符
+            image_base64 = image_base64.replace(' ', '+')
+            
+            encoded_image_byte = base64.b64decode(image_base64)
             image_array = np.frombuffer(encoded_image_byte, np.uint8)
-            image = cv2.imdecode(image_array, cv2.COLOR_RGB2BGR) # opencv 解码
+            image = cv2.imdecode(image_array, cv2.IMREAD_COLOR) # opencv 解码
 
         detect_num, detect_data = self.openVinoYoloV5Detector.detect(image)
         # detect_num, detect_data = self.openVinoSSDLiteDetector.detect(image)
@@ -102,6 +112,7 @@ if __name__ == '__main__':
 
     url = 0
     # url = "F:\\file\\data\\zm-main.mp4"
+    url = "D:\\report\\other\\BXC_VideoAnalyzer_v2\\data\\test.mp4"
 
     cap = cv2.VideoCapture(url)
 

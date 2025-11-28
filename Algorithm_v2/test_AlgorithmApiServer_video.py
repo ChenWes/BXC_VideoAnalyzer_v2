@@ -105,7 +105,8 @@ class test_video():
 if __name__ == '__main__':
     import multiprocessing
 
-    url = "D:\\file\\data\\zm-main.mp4"
+    # url = "D:\\file\\data\\zm-main.mp4"
+    # url = 1 # 本地摄像头
     url = 0
 
     processes = 1 # 测试的进程数量

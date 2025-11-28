@@ -30,15 +30,57 @@ def imageObjectDetect():
 
 
     if image_base64:
-        if algorithm_str in ["openvino_yolov5"]:
+        if algorithm_str in ["openvino_yolov5", "yolo_v5"]:
 
-            encoded_image_byte = base64.b64decode(image_base64)
-            image_array = np.frombuffer(encoded_image_byte, np.uint8)
-            # image = turboJpeg.decode(image_array)  # turbojpeg 解码
-            image = cv2.imdecode(image_array, cv2.COLOR_RGB2BGR) # opencv 解码
+            try:
+                # 将Base64编码还原成图片
+                print(f"[DEBUG] 收到Base64数据长度: {len(image_base64)}")
+                
+                # 处理 Data URI 格式 (例如: data:image/jpeg;base64,xxxxx)
+                if image_base64.startswith('data:image'):
+                    # 移除 Data URI 前缀，只保留实际的 Base64 数据
+                    image_base64 = image_base64.split(',', 1)[1]                    
+                    print(f"[DEBUG] 检测到Data URI格式，移除前缀后长度: {len(image_base64)}")
+                
+                # 修复可能在表单传输中被破坏的Base64字符
+                # 空格可能是被转换的'+'号，需要还原
+                image_base64 = image_base64.replace(' ', '+')
+                
+                encoded_image_byte = base64.b64decode(image_base64)
+                print(f"[DEBUG] 解码后字节长度: {len(encoded_image_byte)}")
+                
+                # 
+                image_array = np.frombuffer(encoded_image_byte, np.uint8)
+                print(f"[DEBUG] numpy数组形状: {image_array.shape}, dtype: {image_array.dtype}")
 
-            if "openvino_yolov5" == algorithm_str:
+                # turbojpeg 解码
+                # image = turboJpeg.decode(image_array)  
+                
+                # opencv 解码
+                image = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
+                
+                if image is None:
+                    print("[ERROR] cv2.imdecode 返回 None，图像解码失败！")
+                    data["code"] = 4001
+                    data["msg"] = "图像解码失败，请检查Base64编码的图片是否为有效的JPG/PNG格式"
+                    return json.dumps(data, ensure_ascii=False)
+                
+                print(f"[DEBUG] 解码成功！图像形状: {image.shape}")
+                
+            except Exception as e:
+                print(f"[ERROR] Base64解码过程异常: {str(e)}")
+                import traceback
+                traceback.print_exc()
+                data["code"] = 4002
+                data["msg"] = f"Base64解码异常: {str(e)}"
+                return json.dumps(data, ensure_ascii=False)
+
+            if algorithm_str in ["openvino_yolov5", "yolo_v5"]:
+
+                # 检测结果
                 detect_num, detect_data = openVinoYoloV5Detector.detect(image)
+
+                # 返回数据
                 data["result"] = {
                     "detect_num": detect_num,
                     "detect_data": detect_data,
