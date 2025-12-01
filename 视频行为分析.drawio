@@ -1,0 +1,311 @@
+<mxfile host="Electron" modified="2025-11-28T09:26:48.090Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="HAZHodpBk5nTMdFdmkbp" version="22.1.2" type="device" pages="4">
+  <diagram id="2xL0i1jVNQuiwgmODU7U" name="视频行为分析系统架构">
+    <mxGraphModel dx="1434" dy="854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wwJXwtHUaVmgqhaOY4rR-1" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="9" y="9" width="1150" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="pU7TiLk_vDAiBWhQCWhP-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="pU7TiLk_vDAiBWhQCWhP-1" target="pU7TiLk_vDAiBWhQCWhP-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-4" value="推送事件或告警给&lt;br&gt;管理平台" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pU7TiLk_vDAiBWhQCWhP-7" vertex="1" connectable="0">
+          <mxGeometry x="-0.0886" y="2" relative="1" as="geometry">
+            <mxPoint x="2" y="32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;strokeWidth=2;dashed=1;" parent="1" source="pU7TiLk_vDAiBWhQCWhP-1" target="pU7TiLk_vDAiBWhQCWhP-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-3" value="完成分析&lt;br&gt;进行推流（可选）" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dkTdLDfhqrg78drwmJO1-2" vertex="1" connectable="0">
+          <mxGeometry x="0.008" relative="1" as="geometry">
+            <mxPoint x="-3" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pU7TiLk_vDAiBWhQCWhP-1" value="Analyzer&lt;br&gt;分析器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="615" y="449" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pU7TiLk_vDAiBWhQCWhP-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;strokeWidth=2;" parent="1" source="pU7TiLk_vDAiBWhQCWhP-2" target="pU7TiLk_vDAiBWhQCWhP-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-1" value="以API接口方式&lt;br&gt;调用算法" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pU7TiLk_vDAiBWhQCWhP-6" vertex="1" connectable="0">
+          <mxGeometry x="-0.0986" y="-1" relative="1" as="geometry">
+            <mxPoint x="-3" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pU7TiLk_vDAiBWhQCWhP-2" value="Algorithm&lt;br&gt;算法库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="935" y="449" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="902xADxa2-k6HwFDrC69-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="pU7TiLk_vDAiBWhQCWhP-3" target="pU7TiLk_vDAiBWhQCWhP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="902xADxa2-k6HwFDrC69-2" value="加入布控" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="902xADxa2-k6HwFDrC69-1">
+          <mxGeometry x="0.3546" y="-1" relative="1" as="geometry">
+            <mxPoint y="-90" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pU7TiLk_vDAiBWhQCWhP-3" value="Admin&lt;br&gt;后台管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="615" y="189" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pU7TiLk_vDAiBWhQCWhP-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;strokeWidth=2;" parent="1" source="pU7TiLk_vDAiBWhQCWhP-4" target="pU7TiLk_vDAiBWhQCWhP-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-7" value="拉取RTSP视频流&lt;br&gt;进行分析" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pU7TiLk_vDAiBWhQCWhP-5" vertex="1" connectable="0">
+          <mxGeometry x="-0.0348" y="2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;dashed=1;strokeWidth=2;" parent="1" source="pU7TiLk_vDAiBWhQCWhP-4" target="pU7TiLk_vDAiBWhQCWhP-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-6" value="获取流媒体服务器数据接口&lt;br&gt;查看流媒体列表" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dkTdLDfhqrg78drwmJO1-5" vertex="1" connectable="0">
+          <mxGeometry x="0.5061" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="902xADxa2-k6HwFDrC69-3" value="获取视频流" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dkTdLDfhqrg78drwmJO1-5">
+          <mxGeometry x="-0.4791" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pU7TiLk_vDAiBWhQCWhP-4" value="ZLM&lt;br&gt;流媒体服务器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="295" y="449" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-2" value="&lt;h1&gt;后台管理&lt;/h1&gt;&lt;p&gt;Python 3.7 + Diango，使用虚拟环境，依赖的库都是常用的库，使用9001端口&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="615" y="49" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-4" value="&lt;h1&gt;算法库&lt;/h1&gt;&lt;p&gt;Python 3.7 + Yolo V5，两种调用方式&lt;/p&gt;&lt;p&gt;1.通过公开API给分析器调用，将分析结果以JSON数据格式返回，目的是为了调用方便且耦合性低&lt;/p&gt;&lt;p&gt;底层是使用OpenCV调用Yolo V5算法&lt;/p&gt;&lt;p&gt;2.使用C++直接调用Python调用，性能方面还能更好一点&lt;/p&gt;&lt;p&gt;使用9003端口&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="935" y="529" width="190" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-5" value="&lt;h1&gt;分析器&lt;/h1&gt;&lt;p&gt;核心项目，使用C++开发，&lt;span style=&quot;background-color: initial;&quot;&gt;使用9002端口&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;主要流程：拉流、解码、实时分析、编码、推流&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;支持功能：调度器、布控、告警&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="615" y="529" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-6" value="&lt;h1&gt;流媒体服务器&lt;/h1&gt;&lt;p&gt;开放多个端口，接受流并进行多协议（RTSP\RTMP\HLS\TS\fmp4\国标等协议）流进行分发&lt;/p&gt;&lt;p&gt;暂时没有接入国标信令模块&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="295" y="529" width="210" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-9" value="554：RTSP" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="529" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-10" value="1935：RTMP" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="559" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-11" value="80：HTTP" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="589" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-12" value="443：HTTPS" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="619" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_MT-JeGfeCCBoYbhJ1lS-13" value="10000：SRT" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="205" y="649" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="dkTdLDfhqrg78drwmJO1-8" target="pU7TiLk_vDAiBWhQCWhP-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-10" value="手动推流&lt;br&gt;测试流程可用&lt;br&gt;生产环境不需要" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dkTdLDfhqrg78drwmJO1-9" vertex="1" connectable="0">
+          <mxGeometry x="-0.7302" relative="1" as="geometry">
+            <mxPoint x="28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dkTdLDfhqrg78drwmJO1-8" value="ffmpeg / XXX&lt;br&gt;流媒体推送者" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="45" y="189" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wwJXwtHUaVmgqhaOY4rR-2" value="&lt;h1&gt;项目架构&lt;/h1&gt;&lt;p&gt;根据视频及代码进行分析和推理&lt;/p&gt;&lt;p&gt;2023-09&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="9" y="699" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wwJXwtHUaVmgqhaOY4rR-3" value="&lt;h1&gt;视频流&lt;/h1&gt;&lt;p&gt;视频流推送&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="45" y="49" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pMePb5FCHCmjoZO1jxz8-1" value="9001" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="230" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pMePb5FCHCmjoZO1jxz8-2" value="9003" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="490" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pMePb5FCHCmjoZO1jxz8-3" value="9002" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="490" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="_Vxs0aXJfli7WxW1C8Ww" name="Analyzer核心代码分析">
+    <mxGraphModel dx="1247" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oOclVIC3svzve-NG02yD-10" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="9" y="9" width="1150" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="oOclVIC3svzve-NG02yD-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="255" width="725" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="oOclVIC3svzve-NG02yD-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="403" width="725" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="oOclVIC3svzve-NG02yD-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="642" width="725" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="SEr4G97SVmpIkbCb7r_u-1" target="NrGh8qfx9uYl0tMQVoi--3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--8" value="HTTP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NrGh8qfx9uYl0tMQVoi--4">
+          <mxGeometry x="0.3743" y="1" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SEr4G97SVmpIkbCb7r_u-1" target="NrGh8qfx9uYl0tMQVoi--5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-1" value="Analyzer&lt;br&gt;实时分析流-分析器" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOclVIC3svzve-NG02yD-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SEr4G97SVmpIkbCb7r_u-2" target="SEr4G97SVmpIkbCb7r_u-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-2" value="AvPullStream&lt;br&gt;拉流" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="SEr4G97SVmpIkbCb7r_u-3" target="NrGh8qfx9uYl0tMQVoi--13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--17" value="推流（可选）" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NrGh8qfx9uYl0tMQVoi--15">
+          <mxGeometry x="-0.4798" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-3" value="AvPushStream&lt;br&gt;编码及推送" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="925" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOclVIC3svzve-NG02yD-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SEr4G97SVmpIkbCb7r_u-4" target="SEr4G97SVmpIkbCb7r_u-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-4" value="Config&lt;br&gt;配置文件解析" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="682" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-5" value="Core&lt;br&gt;核心代码" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="30" y="33.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOclVIC3svzve-NG02yD-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="SEr4G97SVmpIkbCb7r_u-6" target="SEr4G97SVmpIkbCb7r_u-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-6" value="Control&lt;br&gt;布控参数" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="433" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOclVIC3svzve-NG02yD-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SEr4G97SVmpIkbCb7r_u-7" target="SEr4G97SVmpIkbCb7r_u-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-7" value="ControlExecutor&lt;br&gt;布控执行器" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="433" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-8" value="GenerateAlarm&lt;br&gt;合成报警" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="730" y="433" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="SEr4G97SVmpIkbCb7r_u-9" target="SEr4G97SVmpIkbCb7r_u-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-9" value="Scheduler&lt;br&gt;调度器" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="543" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="SEr4G97SVmpIkbCb7r_u-10" target="SEr4G97SVmpIkbCb7r_u-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SEr4G97SVmpIkbCb7r_u-10" value="Server&lt;br&gt;操作接口入口" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="682" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Tuc7d3LsPZ_lt8hC9j-A-1" target="SEr4G97SVmpIkbCb7r_u-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Tuc7d3LsPZ_lt8hC9j-A-1" target="SEr4G97SVmpIkbCb7r_u-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tuc7d3LsPZ_lt8hC9j-A-1" value="main&lt;br&gt;入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="170" y="606" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--3" value="Algorithm&lt;br&gt;实时算法" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="151" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NrGh8qfx9uYl0tMQVoi--5" target="SEr4G97SVmpIkbCb7r_u-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--5" value="GenerateVideo&lt;br&gt;视频合成" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--9" value="&lt;h1&gt;核心逻辑&lt;/h1&gt;&lt;p&gt;核心逻辑&lt;/p&gt;&lt;p&gt;2025-11-28&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="9" y="700" width="190" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--12" value="Loop" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="586" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NrGh8qfx9uYl0tMQVoi--13" target="SEr4G97SVmpIkbCb7r_u-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--16" value="拉流" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NrGh8qfx9uYl0tMQVoi--14">
+          <mxGeometry x="0.1474" y="-3" relative="1" as="geometry">
+            <mxPoint x="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NrGh8qfx9uYl0tMQVoi--13" value="ZLMediaKit&lt;br&gt;流媒体服务器" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="o8DyWKxUjVmLybt1RYuu" name="OpenCV和Yolo">
+    <mxGraphModel dx="1434" dy="854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IjTVkym9fTjumTUtymzY-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="IjTVkym9fTjumTUtymzY-1" target="IjTVkym9fTjumTUtymzY-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IjTVkym9fTjumTUtymzY-1" value="OpenCV DNN" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IjTVkym9fTjumTUtymzY-2" value="Yolo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="610" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2RkXQVBH7iN9bEKXPAa_" name="ZLM服务器">
+    <mxGraphModel dx="819" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="N2r7yikY3z9aaFvAR4-6-1" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="9" y="9" width="1150" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5LPjoNdaLwoHEYqGUXdn-1" target="5LPjoNdaLwoHEYqGUXdn-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-1" value="ZLM Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="809" y="344" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5LPjoNdaLwoHEYqGUXdn-2" target="5LPjoNdaLwoHEYqGUXdn-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-2" value="ffmpeg" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="389" y="344" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-4" value="&lt;div&gt;http://127.0.0.1/live/test/hls.m3u8&lt;/div&gt;&lt;div&gt;http://127.0.0.1/live/test.live.flv&lt;/div&gt;&lt;div&gt;rtmp://127.0.0.1/live/test&lt;/div&gt;&lt;div&gt;rtsp://127.0.0.1/live/test&lt;/div&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="739" y="454" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-6" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ffmpeg -re -stream_loop&amp;nbsp; -1&amp;nbsp; -i test.mp4&amp;nbsp; &amp;nbsp;-rtsp_transport tcp -c copy -f rtsp rtsp://127.0.0.1:554/live/test&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="169" y="314" width="590" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-7" value="推送" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="169" y="284" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-8" value="获取流" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="739" y="424" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5LPjoNdaLwoHEYqGUXdn-9" value="转流并分发" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="929" y="359" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N2r7yikY3z9aaFvAR4-6-2" value="&lt;h1&gt;流媒体服务器&lt;/h1&gt;&lt;p&gt;ZLMediaKit编译完成后，在原系统上运行，目前在Github Action中使用Ubuntu 24.04.3 LTS编译，并在服务器创建相同操作系统的虚拟机运行&lt;/p&gt;&lt;p&gt;2025-11-26&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="9" y="670" width="261" height="149" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
